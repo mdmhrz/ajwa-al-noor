@@ -10,12 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Styles/style.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#B8860B',
+                        primary: '#af8313',
                         secondary: '#DAA520'
                     },
                     borderRadius: {
@@ -34,26 +35,7 @@
             }
         }
     </script>
-    <style>
-        :where([class^="ri-"])::before {
-            content: "\f3c2";
-        }
-
-        .gradient-bg {
-            background: linear-gradient(135deg, #B8860B 0%, #DAA520 100%);
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #B8860B 0%, #DAA520 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .card-hover:hover {
-            transform: translateY(-5px);
-            transition: all 0.3s ease;
-        }
-    </style>
+    
 </head>
 
 <body class="bg-[#FDF5E6]">
@@ -510,7 +492,9 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div class="space-y-6">
-                    <h3 class="text-2xl font-['Pacifico'] gradient-text">Ajwa Al Noor</h3>
+                    <div>
+                        <img src="./assets/logo.svg" class="w-[340px]" alt="">           
+                    </div>
                     <p class="text-gray-400 leading-relaxed">UAE's premier Apple mobile retailer, offering the latest
                         iPhones and accessories with exceptional service since 2020.</p>
                     <div class="flex space-x-4">
@@ -607,47 +591,10 @@
             </div>
         </div>
     </footer>
-    <script>
-        document.getElementById('newsletter-form').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const email = this.querySelector('input[type="email"]').value;
-            if (email) {
-                document.getElementById('newsletter-success').classList.remove('hidden');
-                this.reset();
-                setTimeout(() => {
-                    document.getElementById('newsletter-success').classList.add('hidden');
-                }, 3000);
-            }
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const searchInput = document.querySelector('input[type="text"]');
-            const cartButton = document.querySelector('.ri-shopping-cart-line').parentElement;
-            const userButton = document.querySelector('.ri-user-line').parentElement;
-            searchInput.addEventListener('focus', function () {
-                this.classList.add('border-primary');
-            });
-            searchInput.addEventListener('blur', function () {
-                this.classList.remove('border-primary');
-            });
-            cartButton.addEventListener('click', function () {
-                alert('Cart functionality will be implemented soon!');
-            });
-            userButton.addEventListener('click', function () {
-                alert('User account functionality will be implemented soon!');
-            });
-            const addToCartButtons = document.querySelectorAll('button');
-            addToCartButtons.forEach(button => {
-                if (button.textContent === 'Add to Cart') {
-                    button.addEventListener('click', function () {
-                        const cartCount = document.querySelector('.ri-shopping-cart-line').parentElement.querySelector('span');
-                        cartCount.textContent = parseInt(cartCount.textContent) + 1;
-                    });
-                }
-            });
-        });
-    </script>
+
+    
+
+    <script src="./Scripts/script.js"></script>
 </body>
 
 </html>
