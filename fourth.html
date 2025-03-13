@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajwa Al Noor - Apple Products UAE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="script.js"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md p-4 sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-gray-800">Ajwa Al Noor</a>
+      <ul class="flex space-x-4">
+        <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+        <li><a href="products.html" class="hover:text-blue-600">Products</a></li>
+        <li><a href="faq.html" class="hover:text-blue-600">FAQ</a></li>
+        <li><a href="about.html" class="hover:text-blue-600">About</a></li>
+        <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+        <li><a href="cart.html" class="hover:text-blue-600">Cart (<span id="cart-count">0</span>)</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-cover bg-center h-96" style="background-image: url('hero-banner.jpg');">
+    <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
+      <h1 class="text-4xl text-white font-bold">Discover Premium Apple Products</h1>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="py-10">
+    <div class="container mx-auto">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Products</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="product-list">
+        <!-- Products will be dynamically added here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-10 bg-gray-200">
+    <div class="container mx-auto">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+      <div>
+        <h3 class="font-semibold">Q: Do you offer international shipping?</h3>
+        <p>A: Currently, we only ship within the UAE.</p>
+        <h3 class="font-semibold mt-4">Q: What is the return policy?</h3>
+        <p>A: Products can be returned within 14 days of purchase with the original receipt.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business Theme Section -->
+  <section class="py-10">
+    <div class="container mx-auto">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Business Vision</h2>
+      <p class="text-gray-600">Ajwa Al Noor is dedicated to providing premium Apple products and accessories, ensuring exceptional quality and service for our UAE customers.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white p-4">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Ajwa Al Noor. All rights reserved.</p>
+      <p>Email: contact@ajwaalnoor.com | Phone: +971-123-4567</p>
+    </div>
+  </footer>
+
+  <script>
+    const products = [
+      { id: 1, name: "iPhone 15", price: "$999", image: "iphone.jpg" },
+      { id: 2, name: "MacBook Pro", price: "$1999", image: "macbook.jpg" },
+      { id: 3, name: "Apple Watch", price: "$399", image: "watch.jpg" },
+    ];
+
+    const productList = document.getElementById("product-list");
+    const cartCount = document.getElementById("cart-count");
+    let cart = [];
+
+    products.forEach((product) => {
+      const productCard = document.createElement("div");
+      productCard.className = "bg-white p-4 shadow rounded-lg";
+      productCard.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover rounded">
+        <h3 class="mt-4 text-lg font-semibold">${product.name}</h3>
+        <p class="text-gray-600">${product.price}</p>
+        <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded" onclick="addToCart(${product.id})">Add to Cart</button>
+      `;
+      productList.appendChild(productCard);
+    });
+
+    function addToCart(id) {
+      const product = products.find((p) => p.id === id);
+      cart.push(product);
+      cartCount.textContent = cart.length;
+      alert(`${product.name} added to cart!`);
+    }
+  </script>
+
+</body>
+</html>

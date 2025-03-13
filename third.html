@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajwa Al Noor - Apple Store UAE</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold text-gray-800">Ajwa Al Noor</div>
+      <nav class="space-x-6">
+        <a href="#" class="text-gray-700 hover:text-gray-900">Home</a>
+        <a href="#products" class="text-gray-700 hover:text-gray-900">Products</a>
+        <a href="#contact" class="text-gray-700 hover:text-gray-900">Contact</a>
+      </nav>
+      <div class="relative">
+        <button id="cartButton" class="text-gray-700 hover:text-gray-900">
+          🛒 Cart <span id="cartCount" class="bg-red-500 text-white px-2 py-1 rounded-full text-xs">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="bg-gray-900 text-white min-h-screen flex items-center justify-center">
+    <div class="text-center">
+      <h1 class="text-5xl font-bold mb-4">Welcome to Ajwa Al Noor</h1>
+      <p class="text-xl mb-8">Your Premium Destination for Apple Products in UAE</p>
+      <a href="#products" class="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-gray-200">Explore Products</a>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="container mx-auto px-6 py-12">
+    <h2 class="text-3xl font-bold text-center mb-8">Our Products</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Product Card 1 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="images/iphone14.jpg" alt="iPhone 14" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">iPhone 14</h3>
+          <p class="text-gray-700 mb-4">The latest iPhone with A16 Bionic chip.</p>
+          <p class="text-2xl font-bold text-gray-900">AED 3,999</p>
+          <button onclick="addToCart('iPhone 14', 3999)" class="mt-4 w-full bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="images/macbook-air.jpg" alt="MacBook Air" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">MacBook Air M2</h3>
+          <p class="text-gray-700 mb-4">Ultra-light and powerful laptop.</p>
+          <p class="text-2xl font-bold text-gray-900">AED 5,499</p>
+          <button onclick="addToCart('MacBook Air M2', 5499)" class="mt-4 w-full bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="images/airpods-pro.jpg" alt="AirPods Pro" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">AirPods Pro</h3>
+          <p class="text-gray-700 mb-4">Active noise cancellation for immersive sound.</p>
+          <p class="text-2xl font-bold text-gray-900">AED 899</p>
+          <button onclick="addToCart('AirPods Pro', 899)" class="mt-4 w-full bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+      <p class="text-xl mb-8">We'd love to hear from you! Reach out to us for any inquiries.</p>
+      <a href="mailto:info@ajwaalnoor.com" class="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-gray-200">Email Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; 2023 Ajwa Al Noor. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
