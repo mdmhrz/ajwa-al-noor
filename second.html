@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,26 +35,59 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
     <style>
-        :where([class^="ri-"])::before { content: "\f3c2"; }
-        .slide-enter { transform: translateX(100%); }
-        .slide-enter-active { transform: translateX(0%); transition: transform 0.3s ease-out; }
-        .dropdown-content { display: none; }
-        .dropdown:hover .dropdown-content { display: block; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .newsletter-popup { animation: fadeIn 0.3s ease-in-out; }
-        .product-card:hover { transform: translateY(-5px); transition: transform 0.3s ease; }
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        .slide-enter {
+            transform: translateX(100%);
+        }
+
+        .slide-enter-active {
+            transform: translateX(0%);
+            transition: transform 0.3s ease-out;
+        }
+
+        .dropdown-content {
+            display: none;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .newsletter-popup {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
     </style>
 </head>
+
 <body class="bg-white">
     <header class="fixed w-full bg-white shadow-sm z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <a href="/" class="text-2xl font-['Pacifico'] text-primary">
-                        <img src="./assets/logo.jpg" class="w-[60px]" alt="">
+                    <a href="/" class="text-3xl text-primary flex items-center font-bold gap-3">
+                        <img src="./assets/logo.jpg" class="w-[40px]" alt="">
+                        <p>Ajwa AL Noor</p>
                     </a>
                 </div>
-                
+
                 <nav class="hidden md:flex space-x-8">
                     <a href="#" class="text-gray-700 hover:text-primary transition-colors">Home</a>
                     <div class="dropdown relative">
@@ -71,7 +105,8 @@
 
                 <div class="flex items-center space-x-6">
                     <div class="relative">
-                        <input type="text" placeholder="Search products..." class="w-48 pl-10 pr-4 py-2 rounded-full bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <input type="text" placeholder="Search products..."
+                            class="w-48 pl-10 pr-4 py-2 rounded-full bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary">
                         <i class="ri-search-line absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
                     </div>
                     <button class="text-gray-700 hover:text-primary transition-colors">
@@ -83,7 +118,8 @@
                         <div class="w-6 h-6 flex items-center justify-center">
                             <i class="ri-shopping-cart-line"></i>
                         </div>
-                        <span class="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+                        <span
+                            class="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
                     </button>
                 </div>
             </div>
@@ -91,13 +127,16 @@
     </header>
 
     <main class="pt-16">
-        <section class="relative h-[600px] bg-cover bg-center" style="background-image: url('https://public.readdy.ai/ai/img_res/f99e162b8f074101a0baa692248e7f73.jpg')">
+        <section class="relative h-[600px] bg-cover bg-center"
+            style="background-image: url('https://public.readdy.ai/ai/img_res/f99e162b8f074101a0baa692248e7f73.jpg')">
             <div class="absolute inset-0 bg-black bg-opacity-40"></div>
             <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
                 <div class="text-white max-w-2xl">
                     <h1 class="text-5xl font-bold mb-6">Experience Premium Apple Products</h1>
-                    <p class="text-xl mb-8">Discover the latest innovation in technology with our premium selection of Apple products.</p>
-                    <button class="bg-primary text-white px-8 py-3 rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                    <p class="text-xl mb-8">Discover the latest innovation in technology with our premium selection of
+                        Apple products.</p>
+                    <button
+                        class="bg-primary text-white px-8 py-3 rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
                         Shop Now
                     </button>
                 </div>
@@ -109,31 +148,37 @@
                 <h2 class="text-3xl font-bold text-center mb-12">Featured Products</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
-                        <img src="https://public.readdy.ai/ai/img_res/0318df6b0d16ecc5d9cb8f2bf7e8f57b.jpg" alt="iPhone" class="w-full h-64 object-cover">
+                        <img src="https://public.readdy.ai/ai/img_res/0318df6b0d16ecc5d9cb8f2bf7e8f57b.jpg" alt="iPhone"
+                            class="w-full h-64 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2">iPhone 15 Pro Max</h3>
                             <p class="text-gray-600 mb-4">Starting from AED 4,299</p>
-                            <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                            <button
+                                class="w-full bg-primary text-white py-2 rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
                                 Learn More
                             </button>
                         </div>
                     </div>
                     <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
-                        <img src="https://public.readdy.ai/ai/img_res/ff440b3155e0fcaf4bf9dbfe6a3c6b5e.jpg" alt="MacBook" class="w-full h-64 object-cover">
+                        <img src="https://public.readdy.ai/ai/img_res/ff440b3155e0fcaf4bf9dbfe6a3c6b5e.jpg"
+                            alt="MacBook" class="w-full h-64 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2">MacBook Pro M3</h3>
                             <p class="text-gray-600 mb-4">Starting from AED 7,499</p>
-                            <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                            <button
+                                class="w-full bg-primary text-white py-2 rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
                                 Learn More
                             </button>
                         </div>
                     </div>
                     <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
-                        <img src="https://public.readdy.ai/ai/img_res/3a08954ea9a9abc2588bb1d3a579b366.jpg" alt="iPad" class="w-full h-64 object-cover">
+                        <img src="https://public.readdy.ai/ai/img_res/3a08954ea9a9abc2588bb1d3a579b366.jpg" alt="iPad"
+                            class="w-full h-64 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2">iPad Pro</h3>
                             <p class="text-gray-600 mb-4">Starting from AED 3,399</p>
-                            <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                            <button
+                                class="w-full bg-primary text-white py-2 rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
                                 Learn More
                             </button>
                         </div>
@@ -148,12 +193,14 @@
                     <div>
                         <h2 class="text-3xl font-bold mb-6">Special Offer</h2>
                         <p class="text-xl mb-8">Get up to 10% off on selected Apple products this Ramadan</p>
-                        <button class="bg-primary text-white px-8 py-3 rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                        <button
+                            class="bg-primary text-white px-8 py-3 rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
                             View Offers
                         </button>
                     </div>
                     <div class="text-right">
-                        <img src="https://public.readdy.ai/ai/img_res/45bc9ddebf12200509a316d7660524eb.jpg" alt="Special Offer" class="rounded-lg shadow-xl">
+                        <img src="https://public.readdy.ai/ai/img_res/45bc9ddebf12200509a316d7660524eb.jpg"
+                            alt="Special Offer" class="rounded-lg shadow-xl">
                     </div>
                 </div>
             </div>
@@ -201,8 +248,11 @@
                     <h2 class="text-3xl font-bold text-center mb-8">Subscribe to Our Newsletter</h2>
                     <form id="newsletter-form" class="max-w-md mx-auto">
                         <div class="flex gap-4">
-                            <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 rounded-button border-2 border-gray-200 focus:outline-none focus:border-primary" required>
-                            <button type="submit" class="bg-primary text-white px-6 py-2 rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                            <input type="email" placeholder="Enter your email"
+                                class="flex-1 px-4 py-2 rounded-button border-2 border-gray-200 focus:outline-none focus:border-primary"
+                                required>
+                            <button type="submit"
+                                class="bg-primary text-white px-6 py-2 rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
                                 Subscribe
                             </button>
                         </div>
@@ -217,7 +267,8 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4">About Us</h3>
-                    <p class="text-gray-400">Ajwa Al Noor is UAE's premier Apple products retailer, offering the latest devices with exceptional service.</p>
+                    <p class="text-gray-400">Ajwa Al Noor is UAE's premier Apple products retailer, offering the latest
+                        devices with exceptional service.</p>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Quick Links</h3>
@@ -283,7 +334,7 @@
     </div>
 
     <script>
-        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+        document.getElementById('newsletter-form').addEventListener('submit', function (e) {
             e.preventDefault();
             document.getElementById('newsletter-success').classList.remove('hidden');
         });
@@ -292,4 +343,5 @@
         }
     </script>
 </body>
+
 </html>
