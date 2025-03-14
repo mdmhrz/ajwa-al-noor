@@ -1,0 +1,43 @@
+:where([class^="ri-"])::before {
+    content: "\f3c2";
+}
+
+
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+
+/* Banner */
+.slider-dot.active {
+    background-opacity: 1 !important;
+    width: 2rem !important;
+    border-radius: 9999px !important;
+    transition: all 0.3s ease;
+}
+
+
+/* FAQ Styles */
+
+
+.faq-item.active .answer {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.faq-item.active .icon-plus {
+    transform: rotate(45deg);
+}
+
+.answer {
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.icon-plus {
+    transition: transform 0.3s ease;
+}

@@ -35,16 +35,17 @@
             }
         }
     </script>
-    
+
 </head>
 
 <body class="bg-[#FDF5E6]">
+    <!-- Header -->
     <header class="fixed top-0 w-full bg-gradient-to-r from-[#1a1a1a] to-[#2d2d2d] z-50">
         <nav class="container mx-auto px-6 py-5 flex items-center justify-between">
             <div class="flex items-center space-x-12">
                 <div>
-                    <img src="./assets/logo.svg" class="hidden sm:block w-[280px]" alt="">      
-                    <img src="./assets/only-icon-logo.svg" class="w-[50px] sm:hidden" alt="">      
+                    <img src="./assets/logo.svg" class="hidden sm:block w-[280px]" alt="">
+                    <img src="./assets/only-icon-logo.svg" class="w-[50px] sm:hidden" alt="">
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#"
@@ -78,7 +79,9 @@
             </div>
         </nav>
     </header>
+    <!-- Main -->
     <main class="mt-24">
+        <!-- Banner -->
         <section class="relative h-[600px] overflow-hidden">
             <div class="slider-container relative w-full h-full">
                 <div class="slides relative w-full h-full">
@@ -179,67 +182,8 @@
                 </button>
             </div>
         </section>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const slides = document.querySelectorAll('.slide');
-                const dots = document.querySelectorAll('.slider-dot');
-                const prevButton = document.querySelector('.prev-slide');
-                const nextButton = document.querySelector('.next-slide');
-                let currentSlide = 0;
-                let slideInterval;
-                function showSlide(index) {
-                    slides.forEach(slide => slide.style.opacity = '0');
-                    dots.forEach(dot => dot.classList.remove('active'));
-                    slides[index].style.opacity = '1';
-                    dots[index].classList.add('active');
-                }
-                function nextSlide() {
-                    currentSlide = (currentSlide + 1) % slides.length;
-                    showSlide(currentSlide);
-                }
-                function prevSlide() {
-                    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-                    showSlide(currentSlide);
-                }
-                function startSlideShow() {
-                    slideInterval = setInterval(nextSlide, 5000);
-                }
-                function stopSlideShow() {
-                    clearInterval(slideInterval);
-                }
-                prevButton.addEventListener('click', () => {
-                    stopSlideShow();
-                    prevSlide();
-                    startSlideShow();
-                });
-                nextButton.addEventListener('click', () => {
-                    stopSlideShow();
-                    nextSlide();
-                    startSlideShow();
-                });
-                dots.forEach((dot, index) => {
-                    dot.addEventListener('click', () => {
-                        stopSlideShow();
-                        currentSlide = index;
-                        showSlide(currentSlide);
-                        startSlideShow();
-                    });
-                });
-                const sliderContainer = document.querySelector('.slider-container');
-                sliderContainer.addEventListener('mouseenter', stopSlideShow);
-                sliderContainer.addEventListener('mouseleave', startSlideShow);
-                showSlide(currentSlide);
-                startSlideShow();
-            });
-        </script>
-        <style>
-            .slider-dot.active {
-                background-opacity: 1 !important;
-                width: 2rem !important;
-                border-radius: 9999px !important;
-                transition: all 0.3s ease;
-            }
-        </style>
+
+        <!-- Featured Products  -->
         <section class="py-16 bg-white">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl font-bold mb-12 text-center">Featured Products</h2>
@@ -327,6 +271,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- Special Offers -->
         <section class="py-16 bg-[#FDF5E6]">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl font-bold mb-12 text-center">Special Offers</h2>
@@ -389,6 +335,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- Customer Review -->
         <section class="py-16 bg-white">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl font-bold mb-12 text-center">Customer Reviews</h2>
@@ -450,6 +398,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- Visit Our Store -->
         <section class="py-16 bg-[#FDF5E6]">
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -487,13 +437,149 @@
                 </div>
             </div>
         </section>
+
+        <!-- FAQ Sectoin -->
+         <section>
+            <div class="container mx-auto px-4 py-12 min-h-screen">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h1 class="text-4xl font-semibold mb-4">Frequently Asked Questions</h1>
+                        <p class="text-gray-600 mb-8">Everything you need to know about Apple products</p>
+                        <div class="relative max-w-xl mx-auto">
+                            <input type="text" placeholder="Search your questions here"
+                                class="w-full px-6 py-4 border border-gray-200 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/20 text-sm">
+                            <div
+                                class="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center text-gray-400">
+                                <i class="ri-search-line text-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-5 gap-12">
+                        <div class="col-span-3">
+                            <div class="space-y-4" id="faqList">
+                                <div class="faq-item bg-white rounded-lg shadow-sm cursor-pointer" data-image="delivery">
+                                    <div class="flex items-center justify-between p-6">
+                                        <h3 class="text-lg font-medium">How do I track my iPhone order?</h3>
+                                        <div class="icon-plus w-6 h-6 flex items-center justify-center text-primary">
+                                            <i class="ri-add-line text-xl"></i>
+                                        </div>
+                                    </div>
+                                    <div class="answer px-6 pb-6">
+                                        <p class="text-gray-600">You can easily track your order by:</p>
+                                        <ul class="list-disc ml-6 mt-2 text-gray-600">
+                                            <li>Visiting our Order Status page</li>
+                                            <li>Using your order number in the tracking tool</li>
+                                            <li>Checking the shipping confirmation email</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="faq-item bg-white rounded-lg shadow-sm cursor-pointer" data-image="payment">
+                                    <div class="flex items-center justify-between p-6">
+                                        <h3 class="text-lg font-medium">What payment methods do you accept?</h3>
+                                        <div class="icon-plus w-6 h-6 flex items-center justify-center text-primary">
+                                            <i class="ri-add-line text-xl"></i>
+                                        </div>
+                                    </div>
+                                    <div class="answer px-6 pb-6">
+                                        <p class="text-gray-600">We accept various payment methods including:</p>
+                                        <div class="flex gap-4 mt-4">
+                                            <div class="w-8 h-8 flex items-center justify-center">
+                                                <i class="ri-visa-fill text-2xl"></i>
+                                            </div>
+                                            <div class="w-8 h-8 flex items-center justify-center">
+                                                <i class="ri-mastercard-fill text-2xl"></i>
+                                            </div>
+                                            <div class="w-8 h-8 flex items-center justify-center">
+                                                <i class="ri-paypal-fill text-2xl"></i>
+                                            </div>
+                                            <div class="w-8 h-8 flex items-center justify-center">
+                                                <i class="ri-apple-fill text-2xl"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="faq-item bg-white rounded-lg shadow-sm cursor-pointer" data-image="warranty">
+                                    <div class="flex items-center justify-between p-6">
+                                        <h3 class="text-lg font-medium">How long is the warranty period?</h3>
+                                        <div class="icon-plus w-6 h-6 flex items-center justify-center text-primary">
+                                            <i class="ri-add-line text-xl"></i>
+                                        </div>
+                                    </div>
+                                    <div class="answer px-6 pb-6">
+                                        <p class="text-gray-600">Every iPhone comes with:</p>
+                                        <ul class="list-disc ml-6 mt-2 text-gray-600">
+                                            <li>1-year limited warranty</li>
+                                            <li>90 days of complimentary technical support</li>
+                                            <li>Option to purchase AppleCare+ for extended coverage</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="faq-item bg-white rounded-lg shadow-sm cursor-pointer" data-image="shipping">
+                                    <div class="flex items-center justify-between p-6">
+                                        <h3 class="text-lg font-medium">Do you offer international shipping?</h3>
+                                        <div class="icon-plus w-6 h-6 flex items-center justify-center text-primary">
+                                            <i class="ri-add-line text-xl"></i>
+                                        </div>
+                                    </div>
+                                    <div class="answer px-6 pb-6">
+                                        <p class="text-gray-600">Yes, we ship to many countries worldwide. Shipping costs and
+                                            delivery times vary by location. Enter your country during checkout to see available
+                                            shipping options.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item bg-white rounded-lg shadow-sm cursor-pointer" data-image="trade">
+                                    <div class="flex items-center justify-between p-6">
+                                        <h3 class="text-lg font-medium">Can I trade in my old iPhone?</h3>
+                                        <div class="icon-plus w-6 h-6 flex items-center justify-center text-primary">
+                                            <i class="ri-add-line text-xl"></i>
+                                        </div>
+                                    </div>
+                                    <div class="answer px-6 pb-6">
+                                        <p class="text-gray-600">Yes! Our Trade In program lets you:</p>
+                                        <ul class="list-disc ml-6 mt-2 text-gray-600">
+                                            <li>Get credit toward a new iPhone</li>
+                                            <li>Receive an Apple Gift Card</li>
+                                            <li>Recycle your device responsibly</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-span-2 relative">
+                            <div class="sticky top-8">
+                                <div class="bg-white rounded-lg shadow-sm p-6 h-[500px] flex items-center justify-center">
+                                    <img id="faqImage"
+                                        src="../assets/faq.jpg"
+                                        class="w-full h-full object-contain transition-opacity duration-300"
+                                        alt="FAQ Illustration">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-12 text-center">
+                        <p class="text-gray-600">Still have questions?</p>
+                        <a href="https://readdy.ai/home/6aea6eb3-43ca-4faa-a0a4-465f94b66605/c6f65906-3926-42be-8ed2-cd0331213b39"
+                            data-readdy="true">
+                            <button
+                                class="mt-4 px-6 py-3 bg-primary text-white rounded-button hover:bg-primary/90 transition-colors flex items-center gap-2 mx-auto">
+                                <i class="ri-customer-service-2-line"></i>
+                                Contact Support
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+         </section>
+        
     </main>
+
+    <!-- Footer -->
     <footer class="bg-black text-white py-16">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div class="space-y-6">
                     <div>
-                        <img src="./assets/logo.svg" class="w-[340px]" alt="">           
+                        <img src="./assets/logo.svg" class="w-[340px]" alt="">
                     </div>
                     <p class="text-gray-400 leading-relaxed">UAE's premier Apple mobile retailer, offering the latest
                         iPhones and accessories with exceptional service since 2020.</p>
@@ -592,9 +678,11 @@
         </div>
     </footer>
 
-    
 
+    <script src="./Scripts/faq.js"></script>
     <script src="./Scripts/script.js"></script>
+    <script src="./Scripts/contact-support.js"></script>
+
 </body>
 
 </html>

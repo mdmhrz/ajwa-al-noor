@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajwa Al Noor - Contact Support - Apple Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#B8860B',
+                        secondary: '#DAA520'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .chat-widget {
+            transition: all 0.3s ease;
+        }
+
+        .file-drop-zone.dragging {
+            background-color: rgba(184, 134, 11, 0.1);
+            border-color: #B8860B;
+        }
+    </style>
+</head>
+
+<body class="relative">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-gradient-to-r from-[#1a1a1a] to-[#2d2d2d] z-50">
+        <nav class="container mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center space-x-12">
+                <div>
+                    <img src="./assets/logo.svg" class="hidden sm:block w-[280px]" alt="">
+                    <img src="./assets/only-icon-logo.svg" class="w-[50px] sm:hidden" alt="">
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#"
+                        class="text-gray-300 hover:text-white transition-colors duration-300 text-sm uppercase tracking-wider">Home</a>
+                    <a href="#"
+                        class="text-gray-300 hover:text-white transition-colors duration-300 text-sm uppercase tracking-wider">Shop</a>
+                    <a href="#"
+                        class="text-gray-300 hover:text-white transition-colors duration-300 text-sm uppercase tracking-wider">About</a>
+                    <a href="#"
+                        class="text-gray-300 hover:text-white transition-colors duration-300 text-sm uppercase tracking-wider">Contact</a>
+                </div>
+            </div>
+            <div class="flex items-center space-x-8">
+                <div class="relative">
+                    <input type="text" placeholder="Search products..."
+                        class="w-64 pl-10 pr-4 py-2.5 bg-[#3d3d3d] text-white placeholder-gray-400 rounded-full border-none focus:outline-none focus:ring-2 focus:ring-primary text-sm">
+                    <i class="ri-search-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <button class="relative group">
+                        <i
+                            class="ri-shopping-cart-line text-xl text-gray-300 group-hover:text-white transition-colors duration-300"></i>
+                        <span
+                            class="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+                    </button>
+                    <button class="group">
+                        <i
+                            class="ri-user-line text-xl text-gray-300 group-hover:text-white transition-colors duration-300"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="fixed inset-0 z-0"
+        style="background: url('https://public.readdy.ai/ai/img_res/33cfd550bca92c9f9e3c1e087ccfd9a3.jpg') center/cover no-repeat; opacity: 0.95;">
+    </div>
+    <div class="relative z-10 mt-24">
+        <div class="container mx-auto px-4 py-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center mb-8">
+                    <a href="index.html"
+                        data-readdy="true" class="flex items-center text-primary hover:text-primary/80">
+                        <i class="ri-arrow-left-line mr-2"></i>
+                        <span>Back to FAQs</span>
+                    </a>
+                </div>
+                <div class="text-center mb-12">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
+                        <i class="ri-customer-service-2-line text-primary text-3xl"></i>
+                    </div>
+                    <h1 class="text-3xl font-semibold mb-4">Contact Support</h1>
+                    <p class="text-gray-600 max-w-xl mx-auto">We're here to help you with any questions or concerns.
+                        Please fill out the form below and our support team will get back to you shortly.</p>
+                </div>
+                <div class="bg-white/95 backdrop-blur-md rounded-xl shadow-xl p-8 border border-white/20">
+                    <form id="supportForm" class="space-y-6">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                                <div class="relative">
+                                    <i class="ri-user-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                                    <input type="text" required
+                                        class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 text-sm"
+                                        placeholder="Enter your full name">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                                <div class="relative">
+                                    <i class="ri-mail-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                                    <input type="email" required
+                                        class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 text-sm"
+                                        placeholder="Enter your email address">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Order Number (Optional)</label>
+                            <div class="relative">
+                                <i
+                                    class="ri-shopping-bag-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                                <input type="text"
+                                    class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 text-sm"
+                                    placeholder="Enter your order number">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Issue Category *</label>
+                            <div class="relative">
+                                <select required
+                                    class="w-full px-4 py-2 border border-gray-200 rounded appearance-none focus:outline-none focus:ring-2 focus:ring-primary/20 pr-8">
+                                    <option value="">Select a category</option>
+                                    <option value="order">Order Issues</option>
+                                    <option value="product">Product Information</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="billing">Billing Questions</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                                    <i class="ri-arrow-down-s-line text-gray-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Contact Method
+                                *</label>
+                            <div class="flex gap-6">
+                                <label class="flex items-center">
+                                    <input type="radio" name="contactMethod" value="email" class="mr-2" checked>
+                                    <span>Email</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="contactMethod" value="phone" class="mr-2">
+                                    <span>Phone</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                            <div class="relative">
+                                <i class="ri-message-3-line absolute left-3 top-3 text-gray-400"></i>
+                                <textarea required rows="4"
+                                    class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 text-sm"
+                                    placeholder="Please describe your issue in detail"></textarea>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Attachments</label>
+                            <div
+                                class="file-drop-zone border-2 border-dashed border-gray-200 rounded-lg p-6 text-center">
+                                <input type="file" multiple class="hidden" id="fileInput">
+                                <label for="fileInput" class="cursor-pointer">
+                                    <div class="flex flex-col items-center">
+                                        <i class="ri-upload-cloud-line text-3xl text-gray-400 mb-2"></i>
+                                        <span class="text-sm text-gray-600">Drag and drop files here or click to
+                                            browse</span>
+                                        <span class="text-xs text-gray-500 mt-1">Maximum file size: 10MB</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-gradient-to-r from-amber-50 to-amber-100/50 rounded-lg p-6 flex items-start space-x-4 shadow-sm">
+                            <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full">
+                                <i class="ri-time-line text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium mb-1">Estimated Response Time</p>
+                                <div class="space-y-1">
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="ri-mail-line mr-2"></i>
+                                        <span>Email: 24-48 hours</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="ri-phone-line mr-2"></i>
+                                        <span>Phone: 10-15 minutes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-primary text-white py-3 rounded-button hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
+                            <i class="ri-send-plane-line"></i>
+                            Submit Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="chat-widget fixed bottom-6 right-6 z-50">
+            <button id="chatToggle"
+                class="bg-primary text-white p-4 rounded-full shadow-lg hover:bg-primary/90 transition-colors flex items-center justify-center">
+                <i class="ri-customer-service-2-line text-xl"></i>
+            </button>
+            <div id="chatWindow"
+                class="hidden absolute bottom-16 right-0 w-96 bg-white/95 backdrop-blur-sm rounded-lg shadow-xl">
+                <div class="p-4 border-b">
+                    <div class="flex items-center">
+                        <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                        <span class="font-medium">Live Chat</span>
+                    </div>
+                </div>
+                <div class="h-96 p-4 overflow-y-auto" id="chatMessages">
+                    <div class="text-center text-sm text-gray-500">
+                        An agent will be with you shortly.
+                    </div>
+                </div>
+                <div class="p-4 border-t">
+                    <div class="flex gap-2">
+                        <input type="text" id="messageInput" placeholder="Type your message..."
+                            class="flex-1 px-3 py-2 border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-primary/20">
+                        <button id="sendMessage"
+                            class="bg-primary text-white px-4 rounded-button hover:bg-primary/90 transition-colors">
+                            <i class="ri-send-plane-line"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+    <script src="./Scripts/contact-support.js"></script>
+</body>
+
+</html>

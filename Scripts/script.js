@@ -1,4 +1,60 @@
+// Banner ###
 
+document.addEventListener('DOMContentLoaded', function () {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.slider-dot');
+    const prevButton = document.querySelector('.prev-slide');
+    const nextButton = document.querySelector('.next-slide');
+    let currentSlide = 0;
+    let slideInterval;
+    function showSlide(index) {
+        slides.forEach(slide => slide.style.opacity = '0');
+        dots.forEach(dot => dot.classList.remove('active'));
+        slides[index].style.opacity = '1';
+        dots[index].classList.add('active');
+    }
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+    function startSlideShow() {
+        slideInterval = setInterval(nextSlide, 5000);
+    }
+    function stopSlideShow() {
+        clearInterval(slideInterval);
+    }
+    prevButton.addEventListener('click', () => {
+        stopSlideShow();
+        prevSlide();
+        startSlideShow();
+    });
+    nextButton.addEventListener('click', () => {
+        stopSlideShow();
+        nextSlide();
+        startSlideShow();
+    });
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            stopSlideShow();
+            currentSlide = index;
+            showSlide(currentSlide);
+            startSlideShow();
+        });
+    });
+    const sliderContainer = document.querySelector('.slider-container');
+    sliderContainer.addEventListener('mouseenter', stopSlideShow);
+    sliderContainer.addEventListener('mouseleave', startSlideShow);
+    showSlide(currentSlide);
+    startSlideShow();
+});
+
+
+
+// ###
 document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.querySelector('input[type="text"]');
     const cartButton = document.querySelector('.ri-shopping-cart-line').parentElement;
@@ -40,3 +96,7 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
         }, 3000);
     }
 });
+
+
+
+
